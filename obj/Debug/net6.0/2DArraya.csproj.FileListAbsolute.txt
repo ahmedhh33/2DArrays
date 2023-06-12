@@ -1,0 +1,15 @@
+C:\Users\TRA\Desktop\TRA-Code\2DArraya\2DArraya\bin\Debug\net6.0\2DArraya.exe
+C:\Users\TRA\Desktop\TRA-Code\2DArraya\2DArraya\bin\Debug\net6.0\2DArraya.deps.json
+C:\Users\TRA\Desktop\TRA-Code\2DArraya\2DArraya\bin\Debug\net6.0\2DArraya.runtimeconfig.json
+C:\Users\TRA\Desktop\TRA-Code\2DArraya\2DArraya\bin\Debug\net6.0\2DArraya.dll
+C:\Users\TRA\Desktop\TRA-Code\2DArraya\2DArraya\bin\Debug\net6.0\2DArraya.pdb
+C:\Users\TRA\Desktop\TRA-Code\2DArraya\2DArraya\obj\Debug\net6.0\2DArraya.csproj.AssemblyReference.cache
+C:\Users\TRA\Desktop\TRA-Code\2DArraya\2DArraya\obj\Debug\net6.0\2DArraya.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\TRA\Desktop\TRA-Code\2DArraya\2DArraya\obj\Debug\net6.0\2DArraya.AssemblyInfoInputs.cache
+C:\Users\TRA\Desktop\TRA-Code\2DArraya\2DArraya\obj\Debug\net6.0\2DArraya.AssemblyInfo.cs
+C:\Users\TRA\Desktop\TRA-Code\2DArraya\2DArraya\obj\Debug\net6.0\2DArraya.csproj.CoreCompileInputs.cache
+C:\Users\TRA\Desktop\TRA-Code\2DArraya\2DArraya\obj\Debug\net6.0\2DArraya.dll
+C:\Users\TRA\Desktop\TRA-Code\2DArraya\2DArraya\obj\Debug\net6.0\refint\2DArraya.dll
+C:\Users\TRA\Desktop\TRA-Code\2DArraya\2DArraya\obj\Debug\net6.0\2DArraya.pdb
+C:\Users\TRA\Desktop\TRA-Code\2DArraya\2DArraya\obj\Debug\net6.0\2DArraya.genruntimeconfig.cache
+C:\Users\TRA\Desktop\TRA-Code\2DArraya\2DArraya\obj\Debug\net6.0\ref\2DArraya.dll
