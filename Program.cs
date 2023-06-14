@@ -58,14 +58,23 @@ namespace _2DArraya
                 Console.WriteLine();
             }
            Console.WriteLine();
+            Console.WriteLine("sum array elemen");
             int result = sumArrays(my2DArray);
             // sum array element function
             Console.WriteLine("arrays sum = "+result);
             // average of rows function
+            Console.WriteLine();
+            Console.WriteLine("average of rows");
             double aveResult=averageArrays(my2DArray);
             Console.WriteLine( aveResult);
+            Console.WriteLine();
+            Console.WriteLine("Search for an Element");
+            int searshResult = searchForElement(my2DArray, 76);
+            Console.WriteLine( searshResult);
+            //Console.WriteLine(searchForElement(my2DArray,10);
         }
-        static int sumArrays(int[,] arr)
+        static int sumArrays(int[,] arr)//Exercise 1: Calculate the Sum of all Elements
+
         {
 
 
@@ -84,7 +93,8 @@ namespace _2DArraya
             return sum;
         }
 
-        static double averageArrays(int[,] arr)
+        static double averageArrays(int[,] arr)//Exercise 2: Find the Average of each Row
+
         {
             double avg = 1;
             
@@ -105,5 +115,27 @@ namespace _2DArraya
             
 
         }
+
+        static int searchForElement(int[,] arr, int element)
+        {
+            for (int row = 0; row < arr.GetLength(0); row++)
+            {
+                for (int col = 0; col < arr.GetLength(1); col++)
+                {
+
+                    if (arr[row, col] == element)
+                    {
+                         Console.WriteLine("The element is in position "+row+col);
+                        return 1;
+                    }
+                }
+            }
+            //Console.WriteLine("The element is absent");
+            return -1;
+
+
+
+        }
+
     }
 }
