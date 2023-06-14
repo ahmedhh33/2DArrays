@@ -49,12 +49,21 @@ namespace _2DArraya
             my2DArray[1, 1] = 34;
             my2DArray[2, 0] = 56;
             my2DArray[2, 1] = 76;
-           
+            for(int i = 0; i < totalRows; i++)
+            {
+                for(int j = 0; j < totalCols; j++)
+                {
+                    Console.Write(my2DArray[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+           Console.WriteLine();
             int result = sumArrays(my2DArray);
             // sum array element function
             Console.WriteLine("arrays sum = "+result);
+            // average of rows function
             double aveResult=averageArrays(my2DArray);
-            Console.WriteLine("avrage = "+ aveResult);
+            Console.WriteLine( aveResult);
         }
         static int sumArrays(int[,] arr)
         {
@@ -89,10 +98,10 @@ namespace _2DArraya
                 }
 
                 avg = sum / arr.GetLength(1);
-                Console.WriteLine("Average value for row "+  avg);
+                Console.WriteLine("Average value for row "+row+" = "+  avg);
                 
             }
-            return avg;
+            return 1;
             
 
         }
