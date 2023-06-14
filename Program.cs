@@ -1,4 +1,6 @@
-﻿namespace _2DArraya
+﻿using System.Runtime.Intrinsics.X86;
+
+namespace _2DArraya
 {
     internal class Program
     {
@@ -47,22 +49,24 @@
             my2DArray[1, 1] = 34;
             my2DArray[2, 0] = 56;
             my2DArray[2, 1] = 76;
-            int result=sumArrays(my2DArray);
-            // sum array element function
-            Console.WriteLine(result);
-
-        }
-        static int sumArrays(int[,]arr)
-        {
            
+            int result = sumArrays(my2DArray);
+            // sum array element function
+            Console.WriteLine("arrays sum = "+result);
+            double aveResult=averageArrays(my2DArray);
+            Console.WriteLine("avrage = "+ aveResult);
+        }
+        static int sumArrays(int[,] arr)
+        {
+
 
             int sum = 0;
-            for (int i = 0; i < arr.GetLength(0); i++)
+            for (int row = 0; row < arr.GetLength(0); row++)
             {
-                for (int j = 0; j < arr.GetLength(1); j++)
+                for (int col = 0; col < arr.GetLength(1); col++)
                 {
                     //Console.Write(my2DArray[i, j] + " ");
-                    sum = sum + arr[i, j];
+                    sum = sum + arr[row, col];
                 }
                 //Console.WriteLine();
 
@@ -71,39 +75,26 @@
             return sum;
         }
 
-        static void averageEachrow()
+        static double averageArrays(int[,] arr)
         {
-            /*Console.Write("Write a program that takes a 2D array of integers as input ");
-            Console.WriteLine("and calculates the average value for each row. Display the average value of each row as the output.");
-            int totalRows = 4;
-            int totalCols = 3;
-            int[,] my2DArray = new int[totalRows, totalCols]; // 2d array
-            my2DArray[0, 0] = 10;
-            my2DArray[0, 1] = 20;
-            my2DArray[0, 2] = 16;
-            my2DArray[1, 0] = 34;
-            my2DArray[1, 1] = 56;
-            my2DArray[1, 2] = 76;
-            my2DArray[2, 0] = 50;
-            my2DArray[2, 1] = 100;
-            my2DArray[2, 2] = 54;
-            my2DArray[3, 0] = 78;
-            my2DArray[3, 1] = 77;
-            my2DArray[3, 2] = 23;
-            */
-            int sum = 0;
-            double ave;
-            for (int i = 0; i < totalRows; i++)
+            double avg = 1;
+            
+            for (int row = 0; row < arr.GetLength(0); row++)
             {
-                for (int j = 0; j < totalCols; j++)
+                double sum = 0;
+
+                for (int col = 0; col < arr.GetLength(1); col++)
                 {
-                    Console.Write(my2DArray[i, j] + " ");
-                    sum = sum + my2DArray[i, j];
+                    sum = sum + arr[row, col];
                 }
-                Console.WriteLine();
-                Console.WriteLine("the ave of array elements is = " + sum);
+
+                avg = sum / arr.GetLength(1);
+                Console.WriteLine("Average value for row "+  avg);
+                
             }
-            Console.WriteLine("the ave of array elements is = " + sum);
+            return avg;
+            
+
         }
     }
 }
