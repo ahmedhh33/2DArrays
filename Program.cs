@@ -58,20 +58,33 @@ namespace _2DArraya
                 Console.WriteLine();
             }
            Console.WriteLine();
-            Console.WriteLine("sum array elemen");
+            Console.WriteLine("************* sum array elemen *****************");//EX1
             int result = sumArrays(my2DArray);
             // sum array element function
             Console.WriteLine("arrays sum = "+result);
             // average of rows function
             Console.WriteLine();
-            Console.WriteLine("average of rows");
+            Console.WriteLine("***************** average of rows **************");//EX2
             double aveResult=averageArrays(my2DArray);
             Console.WriteLine( aveResult);
             Console.WriteLine();
-            Console.WriteLine("Search for an Element");
+            Console.WriteLine("************** Search for an Element ************");//EX3
             int searshResult = searchForElement(my2DArray, 76);
             Console.WriteLine( searshResult);
             //Console.WriteLine(searchForElement(my2DArray,10);
+
+            Console.WriteLine();
+            Console.WriteLine("************** transposing matrix ************");//EX4
+
+            int[,] tM= transposeMatrix(my2DArray);
+            for(int i = 0;i < tM.GetLength(0); i++)
+            {
+                for(int j = 0;j < tM.GetLength(1); j++)
+                {
+                    Console.Write(tM[i,j] + " ");
+                }
+                Console.WriteLine();
+            }
         }
         static int sumArrays(int[,] arr)//Exercise 1: Calculate the Sum of all Elements
 
@@ -116,7 +129,8 @@ namespace _2DArraya
 
         }
 
-        static int searchForElement(int[,] arr, int element)
+        static int searchForElement(int[,] arr, int element) //Exercise 3: Search for an Element
+
         {
             for (int row = 0; row < arr.GetLength(0); row++)
             {
@@ -136,6 +150,26 @@ namespace _2DArraya
 
 
         }
+
+        static int[,] transposeMatrix(int[,] matrix)//Exercise 4: Transpose a Matrix
+        {
+            int row = matrix.GetLength(0);
+            int col = matrix.GetLength(1);
+
+            int [,] transposedmatrix = new int [col, row]; // creating new matrix to hold transposed matrix
+
+            for (int i=0; i < row;i++)
+            {
+                for (int j=0; j < col;j++)
+                {
+                    transposedmatrix[j,i] = matrix[i,j];
+                }
+            }
+            return transposedmatrix;
+
+        }
+
+
 
     }
 }
